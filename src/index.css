@@ -53,6 +53,15 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Timer and WebSocket colors */
+    --timer-active: 220 91% 60%;
+    --websocket-connected: 142 76% 36%;
+    --websocket-disconnected: 0 84% 60%;
+    
+    /* Shadow effects */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.1);
+    --shadow-modal: 0 25px 50px -12px hsl(var(--primary) / 0.25);
   }
 
   .dark {
@@ -91,6 +100,15 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Timer and WebSocket colors - dark mode */
+    --timer-active: 220 91% 65%;
+    --websocket-connected: 142 69% 58%;
+    --websocket-disconnected: 0 84% 60%;
+    
+    /* Shadow effects - dark mode */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-modal: 0 25px 50px -12px hsl(var(--primary) / 0.4);
   }
 }
 
