@@ -60,6 +60,10 @@ export default {
         "timer-active": "hsl(var(--timer-active))",
         "websocket-connected": "hsl(var(--websocket-connected))",
         "websocket-disconnected": "hsl(var(--websocket-disconnected))",
+        "success": "hsl(var(--success))",
+        "success-foreground": "hsl(var(--success-foreground))",
+        "warning": "hsl(var(--warning))",
+        "warning-foreground": "hsl(var(--warning-foreground))",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -17,11 +17,13 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         timer: "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg",
         success: "bg-green-600 text-white hover:bg-green-700",
+        warning: "bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:from-yellow-600 hover:to-orange-600 shadow-lg",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-16 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },

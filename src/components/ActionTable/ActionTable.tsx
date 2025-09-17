@@ -838,16 +838,21 @@ export const ActionTable = ({ alertData, onUpdateAcknowledgment, loading }: Acti
                 setTimerManagementOpen(false);
                 setSelectedChamadoForTimer('');
               }}
-              chamado={selectedChamadoForTimer}
+              chamado={parseInt(selectedChamadoForTimer)}
               currentLevel={getCurrentActiveLevel(parseInt(selectedChamadoForTimer)) || 1}
               remainingTime={getCurrentActiveLevel(parseInt(selectedChamadoForTimer)) ? getRemainingTime(parseInt(selectedChamadoForTimer), getCurrentActiveLevel(parseInt(selectedChamadoForTimer))!) : 0}
+              chamadoData={timers.get(parseInt(selectedChamadoForTimer))}
               formatTime={formatTime}
-
+              onNextLevel={(chamado, level, observacao) => {
+                const success = startTimer(chamado, level, 1200);
+                if (success) {
+                  updateObservacao(chamado, level - 1, observacao);
+                }
+              }}
+              updateStatusFinal={(chamado, levelStatusKey, status) => {
+                updateStatusFinal(chamado, status);
+              }}
               updateObservacao={updateObservacao}
-              updateStatusFinal={updateStatusFinal}
-
-              onNextLevel={handleNextLevel}       // 🔹 função de avançar nível
-              onPreviousLevel={handlePreviousLevel} // 🔹 função de retroceder nível
             />
           )}
 
